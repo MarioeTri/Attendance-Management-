@@ -115,7 +115,6 @@ def mark_attendance(name, mode="auto"):
     shift = get_user_shift(name)
     current_shift = determine_shift(now)
     
-    # Check if user's registered shift matches the current shift
     if shift != current_shift:
         warning_message = f"Anda salah shift! Terdaftar untuk shift {shift}, tetapi mencoba check-in pada shift {current_shift}."
         print(warning_message)
